@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'graph/index'
+  get 'graph/data', :defaults => { :format => 'json' }
+
   resources :agencies
   resources :incidents
   # The priority is based upon order of creation: first created -> highest priority.
