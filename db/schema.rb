@@ -11,27 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160213072831) do
-
-  create_table "agencies", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.string   "agency_type", limit: 255
-    t.text     "description", limit: 65535
-    t.string   "country",     limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-  end
+ActiveRecord::Schema.define(version: 20160213153022) do
 
   create_table "incidents", force: :cascade do |t|
+    t.string   "country",      limit: 255
     t.string   "region",       limit: 255
     t.string   "municipality", limit: 255
-    t.text     "description",  limit: 65535
     t.decimal  "amount",                     precision: 10
-    t.string   "currency",     limit: 255
     t.date     "time_occur"
     t.integer  "num_occur",    limit: 4
-    t.string   "country",      limit: 255
     t.datetime "create_time"
+    t.string   "type",         limit: 255
+    t.text     "description",  limit: 65535
     t.datetime "created_at",                                null: false
     t.datetime "updated_at",                                null: false
   end

@@ -1,4 +1,49 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Country:</strong>
+  <%= @incident.country %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @incident.region %>
+</p>
+
+<p>
+  <strong>Municipality:</strong>
+  <%= @incident.municipality %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @incident.amount %>
+</p>
+
+<p>
+  <strong>Time occur:</strong>
+  <%= @incident.time_occur %>
+</p>
+
+<p>
+  <strong>Num occur:</strong>
+  <%= @incident.num_occur %>
+</p>
+
+<p>
+  <strong>Create time:</strong>
+  <%= @incident.create_time %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @incident.type %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @incident.description %>
+</p>
+
 <%= link_to 'Edit', edit_incident_path(@incident) %> |
 <%= link_to 'Back', incidents_path %>

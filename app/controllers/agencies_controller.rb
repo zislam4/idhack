@@ -69,6 +69,6 @@ class AgenciesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def agency_params
-      params.fetch(:agency, {})
+      params.require(:agency).permit(:name, :agency_type, :description, :country)
     end
 end

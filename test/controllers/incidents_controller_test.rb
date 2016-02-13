@@ -18,7 +18,7 @@ class IncidentsControllerTest < ActionController::TestCase
 
   test "should create incident" do
     assert_difference('Incident.count') do
-      post :create, incident: {  }
+      post :create, incident: { amount: @incident.amount, country: @incident.country, create_time: @incident.create_time, description: @incident.description, municipality: @incident.municipality, num_occur: @incident.num_occur, region: @incident.region, time_occur: @incident.time_occur, type: @incident.type }
     end
 
     assert_redirected_to incident_path(assigns(:incident))
@@ -35,7 +35,7 @@ class IncidentsControllerTest < ActionController::TestCase
   end
 
   test "should update incident" do
-    patch :update, id: @incident, incident: {  }
+    patch :update, id: @incident, incident: { amount: @incident.amount, country: @incident.country, create_time: @incident.create_time, description: @incident.description, municipality: @incident.municipality, num_occur: @incident.num_occur, region: @incident.region, time_occur: @incident.time_occur, type: @incident.type }
     assert_redirected_to incident_path(assigns(:incident))
   end
 

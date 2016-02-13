@@ -5,6 +5,15 @@
 <table>
   <thead>
     <tr>
+      <th>Country</th>
+      <th>Region</th>
+      <th>Municipality</th>
+      <th>Amount</th>
+      <th>Time occur</th>
+      <th>Num occur</th>
+      <th>Create time</th>
+      <th>Type</th>
+      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +21,15 @@
   <tbody>
     <% @incidents.each do |incident| %>
       <tr>
+        <td><%= incident.country %></td>
+        <td><%= incident.region %></td>
+        <td><%= incident.municipality %></td>
+        <td><%= incident.amount %></td>
+        <td><%= incident.time_occur %></td>
+        <td><%= incident.num_occur %></td>
+        <td><%= incident.create_time %></td>
+        <td><%= incident.type %></td>
+        <td><%= incident.description %></td>
         <td><%= link_to 'Show', incident %></td>
         <td><%= link_to 'Edit', edit_incident_path(incident) %></td>
         <td><%= link_to 'Destroy', incident, method: :delete, data: { confirm: 'Are you sure?' } %></td>

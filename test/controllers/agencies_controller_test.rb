@@ -18,7 +18,7 @@ class AgenciesControllerTest < ActionController::TestCase
 
   test "should create agency" do
     assert_difference('Agency.count') do
-      post :create, agency: {  }
+      post :create, agency: { agency_type: @agency.agency_type, country: @agency.country, description: @agency.description, name: @agency.name }
     end
 
     assert_redirected_to agency_path(assigns(:agency))
@@ -35,7 +35,7 @@ class AgenciesControllerTest < ActionController::TestCase
   end
 
   test "should update agency" do
-    patch :update, id: @agency, agency: {  }
+    patch :update, id: @agency, agency: { agency_type: @agency.agency_type, country: @agency.country, description: @agency.description, name: @agency.name }
     assert_redirected_to agency_path(assigns(:agency))
   end
 
